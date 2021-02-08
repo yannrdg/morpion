@@ -53,16 +53,20 @@ function compteur(){
     }
 }
 
-function rejouer()
-{
+function end(){
+    //Si un joueur gagne alors toutes les cases passent à true pour ne pas pouvoir cocher d'autres cases
     if(play == true)
     {
         for(let j = 0; j < 9; j += 1)
         {
-            tDiv[j] = true;
-        }
+            tDiv[j] = true
+            button.style.display = "block";
+        }  
+    }else if(compteurDeTour == 9){
+        button.style.display = "block";
     }
 }
+
 
 function gagner(){
     //Pour les ronds Joueur 2
@@ -170,12 +174,11 @@ for(let i = 0; i < 9; i += 1)
         {
             compteur();
             cocherCase(i);
-            console.log(compteurDeTour);
             tDiv[i] = true;
             gagner();
-            rejouer();
-            console.log(tResult);
-            console.log(tDiv);
+            end();
+            console.log(compteurDeTour);
+            //console.log(tDiv);
         }
     });
 
