@@ -170,10 +170,10 @@ for(c= 0; c < 18; c += 1){
     divCroix[c].style.background = color1;
 }*/
 
-if(j1 == (null || ""))
+if((j1 || j2) == (null))
 {
     window.location.reload();
-}else if(j2 == (null || "")){
+}else if((j1 || j2) == ("")){
     window.location.reload();
 }
 
