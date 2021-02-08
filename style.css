@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#grid{
+    margin-top: 2vw;
+    margin-left: 2vw;
+    display: grid;
+    width: 600px;
+    height: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#grid>div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* Rond*/
+
+.rond{
+    margin: 50px 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: green;
+    display: none;
+}
+
+/* Croix*/
+.croix{
+    position: relative;
+    margin: 100px 50px;
+    display: none;
+}
+
+.croix>div{
+    width: 100px;
+    height: 10px;
+    background-color: aqua;
+}
+
+.croix>div:first-of-type{
+    transform: rotate(45deg);
+}
+
+.croix>div:nth-of-type(2){  
+    transform: rotate(135deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
