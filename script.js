@@ -60,11 +60,19 @@ function end(){
         for(let j = 0; j < 9; j += 1)
         {
             tDiv[j] = true
-            button.style.display = "block";
+            rejouer();
         }  
     }else if(compteurDeTour == 9){
-        button.style.display = "block";
+        gagnant.innerHTML = "Dommage... Personne n'a gagné !"
+        rejouer();
     }
+}
+
+function rejouer()
+{
+    button.style.display = "block";
+    grid.style.transitionDuration = "800ms";
+    grid.style.opacity = 0.1;
 }
 
 
