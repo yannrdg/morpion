@@ -152,8 +152,7 @@ function gagner(){
     }
 }
 
-
-
+//Demander aux joueurs de rentrer le nom
 
 const j1 = prompt("Entrez votre prénom du joueur 1","");
 const j2 = prompt("Entrez votre prénom du joueur 2","");
