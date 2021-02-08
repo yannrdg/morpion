@@ -62,8 +62,6 @@ function rejouer()
         {
             tDiv[j] = true;
         }
-        button.style.display = "block";
-        grid.style.display = "none";
     }
 }
 
@@ -182,4 +180,5 @@ for(let i = 0; i < 9; i += 1)
             console.log(tDiv);
         }
     });
+
 }
