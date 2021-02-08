@@ -5,8 +5,9 @@ const rond = document.getElementsByClassName("rond");
 const croix = document.getElementsByClassName("croix");
 const gagnant = document.querySelector("#gagnant");
 const divCroix = document.querySelectorAll(".croix>div");
-//let color1;
-//let color2;
+
+const j1 = "Joueur1"
+const j2 = "Joueur2"
 
 button.style.display = "none";
 
