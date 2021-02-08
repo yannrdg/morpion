@@ -15,6 +15,7 @@ button.addEventListener("click", () => {
 })
 
 let compteurDeTour = 0;
+let compteurDeManche = 0;
 
 let play = false;
 
