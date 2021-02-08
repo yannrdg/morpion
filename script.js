@@ -157,18 +157,8 @@ function gagner(){
 
 
 const j1 = prompt("Entrez votre prénom du joueur 1","");
-//const colorJ1 = prompt("Quelle est votre couleur préférée joueur 1","");
 const j2 = prompt("Entrez votre prénom du joueur 2","");
-//const colorJ2 = prompt("Quelle est votre couleur préférée joueur 2","");
 
-
-/*for(r = 0; r < 9; r += 1){
-    rond[r].style.background = color2;
-}
-
-for(c= 0; c < 18; c += 1){
-    divCroix[c].style.background = color1;
-}*/
 
 if((j1 || j2) == (null))
 {
