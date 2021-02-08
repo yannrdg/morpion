@@ -1,3 +1,4 @@
+const grid = document.getElementById("grid");
 const divCase = document.querySelectorAll("#grid>div");
 const button = document.querySelector("#rejouer");
 const rond = document.getElementsByClassName("rond");
@@ -62,6 +63,7 @@ function rejouer()
             tDiv[j] = true;
         }
         button.style.display = "block";
+        grid.style.display = "none";
     }
 }
 

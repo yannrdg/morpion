@@ -12,6 +12,7 @@
     height: 600px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    background-color: wheat;
 }
 
 #grid>div{
@@ -55,5 +56,10 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+@keyframes none {
+    0%{display: block;}
+    100%{display: none;}
 }
 
