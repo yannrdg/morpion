@@ -6,9 +6,6 @@ const croix = document.getElementsByClassName("croix");
 const gagnant = document.querySelector("#gagnant");
 const divCroix = document.querySelectorAll(".croix>div");
 
-const j1 = "Joueur1"
-const j2 = "Joueur2"
-
 button.style.display = "none";
 
 button.addEventListener("click", () => {
@@ -155,15 +152,15 @@ function gagner(){
 
 //Demander aux joueurs de rentrer le nom
 
-const j1 = prompt("Entrez votre prénom du joueur 1","");
-const j2 = prompt("Entrez votre prénom du joueur 2","");
+let j1 = prompt("Entrez votre prénom du joueur 1","");
+let j2 = prompt("Entrez votre prénom du joueur 2","");
 
-
-if((j1 || j2) == (null))
-{
-    window.location.reload();
-}else if((j1 || j2) == ("")){
-    window.location.reload();
+if((j1 || j2) == null){
+    j1 = "Joueur 1";
+    j2 = "Joueur 2";
+}else if((j1 || j2) == ""){
+    j1 = "Joueur 1";
+    j2 = "Joueur 2";
 }
 
 for(let i = 0; i < 9; i += 1)
