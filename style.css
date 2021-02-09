@@ -15,7 +15,6 @@ h1{
 /*Grille*/
 
 main{
-    margin-top: 2vw;
     display: flex;
     justify-content: center;
 }
