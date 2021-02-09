@@ -195,8 +195,7 @@ if((j1 || j2) == null){
 for(let i = 0; i < 9; i += 1)
 {
     divCase[i].addEventListener("click", () => {
-        if(tDiv[i] === false)
-        {
+        if(tDiv[i] === false){
             compteur();
             cocherCase(i);
             tDiv[i] = true;
