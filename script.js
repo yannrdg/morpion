@@ -60,22 +60,12 @@ function end(){
         for(let j = 0; j < 9; j += 1)
         {
             tDiv[j] = true
-            //rejouer();
+            mancheSuivante();
         }  
     }else if(compteurDeTour == 9){
         //gagnant.innerHTML = "Dommage... Personne n'a gagné !"
         //rejouer();
-        play = false;
-        compteurDeTour = 0;
-        compteurDeManche ++;
-        for(let j = 0; j < 9; j += 1)
-        {
-            tDiv[j] = false;
-            tResult[j] = 0;
-            croix[j].style.display = "none";
-            rond[j].style.display = "none";
-            //rejouer();
-        }  
+        mancheSuivante();
     }
 }
 
@@ -84,6 +74,19 @@ function rejouer()
     button.style.display = "block";
     grid.style.transitionDuration = "800ms";
     grid.style.opacity = 0.1;
+}
+
+function mancheSuivante(){
+    play = false;
+    compteurDeTour = 0;
+    compteurDeManche ++;
+    for(let j = 0; j < 9; j += 1)
+    {
+        tDiv[j] = false;
+        tResult[j] = 0;
+        croix[j].style.display = "none";
+        rond[j].style.display = "none";
+    }  
 }
 
 
