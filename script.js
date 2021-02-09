@@ -60,11 +60,22 @@ function end(){
         for(let j = 0; j < 9; j += 1)
         {
             tDiv[j] = true
-            rejouer();
+            //rejouer();
         }  
     }else if(compteurDeTour == 9){
-        gagnant.innerHTML = "Dommage... Personne n'a gagné !"
-        rejouer();
+        //gagnant.innerHTML = "Dommage... Personne n'a gagné !"
+        //rejouer();
+        play = false;
+        compteurDeTour = 0;
+        compteurDeManche ++;
+        for(let j = 0; j < 9; j += 1)
+        {
+            tDiv[j] = false;
+            tResult[j] = 0;
+            croix[j].style.display = "none";
+            rond[j].style.display = "none";
+            //rejouer();
+        }  
     }
 }
 
@@ -185,8 +196,9 @@ for(let i = 0; i < 9; i += 1)
             tDiv[i] = true;
             gagner();
             end();
-            console.log(compteurDeTour);
+            //console.log(compteurDeTour);
             //console.log(tDiv);
+            console.log(compteurDeManche);
         }
     });
 
