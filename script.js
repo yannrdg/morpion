@@ -60,8 +60,8 @@ function end(){
         for(let j = 0; j < 9; j += 1)
         {
             tDiv[j] = true
-            mancheSuivante();
-        }  
+        }
+        mancheSuivante();
     }else if(compteurDeTour == 9){
         //gagnant.innerHTML = "Dommage... Personne n'a gagné !"
         //rejouer();
@@ -86,7 +86,7 @@ function mancheSuivante(){
         tResult[j] = 0;
         croix[j].style.display = "none";
         rond[j].style.display = "none";
-    }  
+    }
 }
 
 
@@ -189,6 +189,7 @@ if((j1 || j2) == null){
     j2 = "Joueur 2";
 }
 
+
 for(let i = 0; i < 9; i += 1)
 {
     divCase[i].addEventListener("click", () => {
@@ -204,5 +205,4 @@ for(let i = 0; i < 9; i += 1)
             console.log(compteurDeManche);
         }
     });
-
 }
