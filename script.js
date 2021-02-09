@@ -14,6 +14,8 @@ button.addEventListener("click", () => {
 
 let compteurDeTour = 0;
 let compteurDeManche = 0;
+let nbrWinJ1 = 0;
+let nbrWinJ2 = 0;
 
 let play = false;
 
@@ -95,84 +97,84 @@ function gagner(){
     if(tResult[0] == 1 && tResult[1] == 1 && tResult[2] == 1){
         //Horizontal haut
         play = true;
-        gagnant.innerText = j2 + " a gagné !";
+        nbrWinJ2 ++;
     }else if(tResult[0] == 1 && tResult[3] == 1 && tResult[6] == 1)
     {
         //Verticale gauche
         play = true;
-        gagnant.innerText = j2 + " a gagné !";
+        nbrWinJ2 ++;
     }else if(tResult[0] == 1 && tResult[4] == 1 && tResult[8] == 1)
     {
         //Diagonale HG/BD
         play = true;
-        gagnant.innerText = j2 + " a gagné !";
+        nbrWinJ2 ++;
     }else if(tResult[2] == 1 && tResult[4] == 1 && tResult[6] == 1)
     {
         //Diagonale HD/BG
         play = true;
-        gagnant.innerText = j2 + " a gagné !";
+        nbrWinJ2 ++;
     }else if(tResult[2] == 1 && tResult[5] == 1 && tResult[8] == 1)
     {
         //Verticale droite
         play = true;
-        gagnant.innerText = j2 + " a gagné !";
+        nbrWinJ2 ++;
     }else if(tResult[1] == 1 && tResult[4] == 1 && tResult[7] == 1)
     {
         //Verticale milieu
         play = true;
-        gagnant.innerText = j2 + " a gagné !";
+        nbrWinJ2 ++;
     }else if(tResult[3] == 1 && tResult[4] == 1 && tResult[5] == 1)
     {
         //horizontale centre
         play = true;
-        gagnant.innerText = j2 + " a gagné !";
+        nbrWinJ2 ++;
     }else if(tResult[6] == 1 && tResult[7] == 1 && tResult[8] == 1)
     {
         //horizontale bas
         play = true;
-        gagnant.innerText = j2 + " a gagné !";
+        nbrWinJ2 ++;
     }
     //Pour les croix Joueur 1
     else if (tResult[0] == 2 && tResult[1] == 2 && tResult[2] == 2){
         //Horizontal haut
         play = true;
-        gagnant.innerText = j1 + " a gagné !";
+        nbrWinJ1 ++;
     }
     else if(tResult[0] == 2 && tResult[3] == 2 && tResult[6] == 2)
     {
         //Verticale gauche
         play = true;
-        gagnant.innerText = j1 + " a gagné !";
+        nbrWinJ1 ++;
     }else if(tResult[0] == 2 && tResult[4] == 2 && tResult[8] == 2)
     {
         //Diagonale HG/BD
         play = true;
-        gagnant.innerText = j1 + " a gagné !";
+        nbrWinJ1 ++;
     }else if(tResult[2] == 2 && tResult[4] == 2 && tResult[6] == 2)
     {
         //Diagonale HD/BG
         play = true;
-        gagnant.innerText = j1 + " a gagné !";
+        nbrWinJ1 ++;
     }else if(tResult[2] == 2 && tResult[5] == 2 && tResult[8] == 2)
     {
         //Verticale droite
         play = true;
-        gagnant.innerText = j1 + " a gagné !";
+        nbrWinJ1 ++;
     }else if(tResult[1] == 2 && tResult[4] == 2 && tResult[7] == 2)
     {
         //Verticale milieu
         play = true;
-        gagnant.innerText = j1 + " a gagné !";
+        nbrWinJ1 ++;
     }else if(tResult[3] == 2 && tResult[4] == 2 && tResult[5] == 2)
     {
         //horizontale centre
         play = true;
-        gagnant.innerText = j1 + " a gagné !";
+        nbrWinJ1 ++;
     }else if(tResult[6] == 2 && tResult[7] == 2 && tResult[8] == 2)
     {
         //horizontale bas
         play = true;
-        gagnant.innerText = j1 + " a gagné !";
+        nbrWinJ1 ++;
     }
 }
 
@@ -203,6 +205,8 @@ for(let i = 0; i < 9; i += 1)
             //console.log(compteurDeTour);
             //console.log(tDiv);
             console.log(compteurDeManche);
+            console.log('J1 : '+nbrWinJ1);
+            console.log('J2 : '+nbrWinJ2);
         }
     });
 }
